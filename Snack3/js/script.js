@@ -20,3 +20,53 @@ const automobili = [
     { marca: "Opel", modello: "Corsa", alimentazione: "gpl" }
 ];
 
+let veicoliBenzina = [];
+let veicoliDiesel = [];
+let altraAlimentazione = [];
+
+
+automobili.forEach ((curAuto) => {
+    if (curAuto.alimentazione === "benzina"){
+        veicoliBenzina.push (curAuto);
+    } else if (curAuto.alimentazione === "diesel") {
+        veicoliDiesel.push (curAuto);
+    } else { curAuto !== "benzina" && curAuto !== "diesel"
+        altraAlimentazione.push (curAuto);
+    }
+});
+
+console.log(veicoliBenzina);
+console.log(veicoliDiesel);
+console.log(altraAlimentazione);
+
+// benzina = automobili.filter ((curAuto) => {
+// // console.log( curAuto);
+//     if (curAuto.alimentazione === "benzina") {
+//         return true
+//     } else {
+//         return false
+//     }
+// });
+
+// console.log(benzina);
+
+// diesel = automobili.filter ((curAuto) => {
+//     if (curAuto.alimentazione === "diesel"){
+//         return true
+//     } else {
+//         return false
+//     }
+// });
+
+// console.log(diesel);
+
+// altraAlimentazione = automobili.filter ((curAuto) => {
+//     if (curAuto.alimentazione !== benzina && curAuto.alimentazione !== diesel){
+//         return true
+//     } else {
+//         return false
+//     }
+// });
+
+// console.log(altraAlimentazione);
+
