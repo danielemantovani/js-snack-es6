@@ -17,7 +17,7 @@ const persone = [
     {
         username : "Giulia",
         lastname : "Verdi",
-        età : 29
+        età : 15
     },
     {
         username : "Mario",
@@ -26,3 +26,13 @@ const persone = [
     },
 ];
 
+const idoneità = persone.map ((curPersona) => {
+    console.log(curPersona);
+    if ( curPersona.età >= 18){
+        return `${curPersona.username} ${curPersona.lastname} è idoneo/a alla guida`
+    } else {
+        return ` ${curPersona.username} ${curPersona.lastname} non è idoneo/a alla guida`
+    }
+});
+
+console.log(idoneità);
